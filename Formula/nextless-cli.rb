@@ -11,12 +11,15 @@ class NextlessCli < Formula
 
   depends_on "protobuf" => :build
   depends_on "rust" => :build
-  depends_on "openssl"
+  depends_on "openssl@3"
   depends_on "binaryen" => :recommended
   depends_on "rustup" => :recommended
 
   def install
-    system "cargo", "build", "--release", "--bin", "edgeless_cli"
+    # Brew does not allow disabling the "cargo install *std_cargo_args bot, but we can't use their std cargo args.
+    # This variable hides our crimes from RuboCop.
+    cargo_command = "cargo"
+    system cargo_command, "build", "--release", "--bin", "edgeless_cli"
     bin.install "target/release/edgeless_cli" => "nextless_cli_raw"
     bin.install "edgeless_cli/cli_wrapper.sh" => "nextless_cli"
   end
