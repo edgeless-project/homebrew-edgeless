@@ -4,8 +4,8 @@ class NextlessCli < Formula
   desc "CLI tool to interact with a Nextless Controller"
   homepage "https://github.com/edgeless-project/nextless/tree/development/edgeless_cli"
   url "https://github.com/edgeless-project/nextless.git",
-    tag:      "cli-0.2",
-    revision: "1e51867bef8dce415d1cb31f940cb5a8c0252a44"
+    tag:      "cli-3.0.0",
+    revision: "1117467dba55847012ac709af66c575bf2a56971"
   license "MIT"
   head "https://github.com/edgeless-project/nextless.git", branch: "development"
 
