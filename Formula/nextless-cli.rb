@@ -9,6 +9,11 @@ class NextlessCli < Formula
   license "MIT"
   head "https://github.com/edgeless-project/nextless.git", branch: "development"
 
+  bottle do
+    root_url "https://github.com/edgeless-project/homebrew-edgeless/releases/download/nextless-cli-3.0.0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "806a23a4684bde84f51ba57d2d074988fd280dbb941c452d0231ac2d137758eb"
+  end
+
   depends_on "protobuf" => :build
   depends_on "rust" => :build
   depends_on "openssl@3"
