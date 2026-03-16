@@ -4,17 +4,10 @@ class NextlessCli < Formula
   desc "CLI tool to interact with a Nextless Controller"
   homepage "https://github.com/edgeless-project/nextless/tree/development/edgeless_cli"
   url "https://github.com/edgeless-project/nextless.git",
-    tag:      "cli-0.1-wrapper2",
-    revision: "163587e16d8073df7706b21f1bdf50640782c962"
+    tag:      "cli-0.2",
+    revision: "1e51867bef8dce415d1cb31f940cb5a8c0252a44"
   license "MIT"
   head "https://github.com/edgeless-project/nextless.git", branch: "development"
-
-  bottle do
-    root_url "https://github.com/edgeless-project/homebrew-edgeless/releases/download/nextless-cli-2"
-    rebuild 1
-    sha256 cellar: :any, arm64_sequoia: "1495721c2eac3a86b6eb1b615fc2f0df16c8e9a033b114d175cf3d7e1c92476f"
-    sha256 cellar: :any, ventura:       "809e3428e020b3061e772bbd316a3ecf4a81b9b0128902f30b6ae7e126632027"
-  end
 
   depends_on "protobuf" => :build
   depends_on "rust" => :build
